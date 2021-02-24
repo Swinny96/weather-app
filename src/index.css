@@ -8,23 +8,24 @@
 body {
   min-height: 100vh;
   position: relative;
+  background-image: url("./assets/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   body {
     margin: 0 20px;
-  }
-  body:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url("./assets/background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
 }
 

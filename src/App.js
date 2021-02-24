@@ -18,9 +18,9 @@ class App extends Component {
   handleSearchCity = (e) => {
     e.preventDefault();
     const { value } = this.state;
-    const APIkey = process.env.REACT_APP_API_KEY;
-    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID="${APIkey}"&units=metric`;
-    const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=${APIkey}&units=metric`;
+    // const APIkey = process.env.REACT_APP_API_KEY;
+    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=59c38104b34dc1c5dff6c4f9d7365f59&units=metric`;
+    const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=59c38104b34dc1c5dff6c4f9d7365f59&units=metric`;
 
     Promise.all([fetch(weather), fetch(forecast)])
       .then(([res1, res2]) => {
